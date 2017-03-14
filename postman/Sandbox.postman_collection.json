@@ -1,0 +1,110 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sandbox",
+		"_postman_id": "e3cec4f0-f4a8-605c-ffbc-af6810fd9175",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hateoas",
+			"description": "",
+			"item": [
+				{
+					"name": "Get list of users",
+					"request": {
+						"url": "http://localhost:8001/users",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create ibanadiga",
+					"request": {
+						"url": "http://localhost:8001/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"ibanadiga\",\n\"firstName\": \"ihor\",\n\"secondName\": \"banadiga\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Show ibanadiga user",
+					"request": {
+						"url": "http://localhost:8001/users/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Export user to xml",
+					"request": {
+						"url": "http://localhost:8001/users/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Export user to json",
+					"request": {
+						"url": "http://localhost:8001/users/1/export",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Export user to pdf",
+					"request": {
+						"url": "http://localhost:8001/users/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/pdf",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
