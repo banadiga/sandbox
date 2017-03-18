@@ -3,7 +3,6 @@ package com.example.controller;
 import com.example.entity.User;
 import com.example.repository.UserRepository;
 
-import org.hibernate.mapping.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +26,6 @@ public class UserController {
       produces = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE, APPLICATION_PDF_VALUE})
   @ResponseBody
   public User findOne(@PathVariable("id") Long id) {
-
     return userRepository.findOne(id);
   }
 }
