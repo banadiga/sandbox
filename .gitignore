@@ -1,6 +1,6 @@
 .start/
 target/
-.idea
+.idea/
 *.iml
 pom.xml.tag
 pom.xml.releaseBackup
