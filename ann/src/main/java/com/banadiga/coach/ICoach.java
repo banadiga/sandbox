@@ -3,6 +3,6 @@ package com.banadiga.coach;
 import com.banadiga.ann.IArtificialNeuralNetwork;
 
 public interface ICoach {
-  int getSize();
+  int getInputs();
   void training(IArtificialNeuralNetwork artificialNeuralNetwork);
 }

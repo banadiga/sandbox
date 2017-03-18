@@ -9,7 +9,7 @@ public class AndCoach extends BaseCoach implements ICoach {
   private Double inputs[][] = {{0d, 0d}, {1d, 1d}, {1d, 0d}, {0d, 1d}};
   private Double outputs[] = {0d, 1d, 0d, 0d};
 
-  public int getSize() {
+  protected int getSize() {
     return inputs.length;
   }
 
@@ -31,5 +31,9 @@ public class AndCoach extends BaseCoach implements ICoach {
 
   protected Double getExpectedError() {
     return ERROR;
+  }
+
+  public int getInputs() {
+    return 2;
   }
 }

@@ -11,7 +11,7 @@ public class AndApplication {
     System.out.println("Creating Coach... ");
     ICoach coach = new AndCoach();
 
-    IArtificialNeuralNetwork artificialNeuralNetwork = new ArtificialNeuralNetwork(coach.getSize());
+    IArtificialNeuralNetwork artificialNeuralNetwork = new ArtificialNeuralNetwork(coach.getInputs());
     System.out.println(artificialNeuralNetwork);
 
     System.out.println("Training... ");

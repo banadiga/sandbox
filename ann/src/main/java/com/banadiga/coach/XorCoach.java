@@ -33,4 +33,8 @@ public class XorCoach extends BaseCoach implements ICoach {
   protected Double getExpectedError() {
     return ERROR;
   }
+
+  public int getInputs() {
+    return 2;
+  }
 }

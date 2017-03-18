@@ -11,7 +11,7 @@ public class XorApplication {
     System.out.println("Creating Coach... ");
     ICoach coach = new XorCoach();
 
-    IArtificialNeuralNetwork artificialNeuralNetwork = new ArtificialNeuralNetwork(coach.getSize(), 2);
+    IArtificialNeuralNetwork artificialNeuralNetwork = new ArtificialNeuralNetwork(coach.getInputs(), 2);
     System.out.println(artificialNeuralNetwork);
 
     System.out.println("Training... ");
