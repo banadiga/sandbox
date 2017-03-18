@@ -11,7 +11,7 @@ public class OrApplication {
     System.out.println("Creating Coach... ");
     ICoach coach = new OrCoach();
 
-    IArtificialNeuralNetwork artificialNeuralNetwork = new ArtificialNeuralNetwork();
+    IArtificialNeuralNetwork artificialNeuralNetwork = new ArtificialNeuralNetwork(coach.getSize());
     System.out.println(artificialNeuralNetwork);
 
     System.out.println("Training... ");

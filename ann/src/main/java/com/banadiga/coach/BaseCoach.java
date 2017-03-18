@@ -6,8 +6,6 @@ import static java.lang.Math.abs;
 
 public abstract class BaseCoach implements ICoach {
 
-  protected abstract int getSize();
-
   protected abstract Double[] getInputs(int index);
 
   protected abstract Double getExpectedResult(int index);

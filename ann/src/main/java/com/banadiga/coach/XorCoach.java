@@ -1,13 +1,14 @@
 package com.banadiga.coach;
 
-public class AndCoach extends BaseCoach implements ICoach {
+public class XorCoach extends BaseCoach implements ICoach {
 
   private static final double ERROR = 0.0001D;
-  private static final int MINSTEP = 5;
   private static final int MAXSTEP = 100000;
+  private static final int MINSTEP = 2;
+
 
   private Double inputs[][] = {{0d, 0d}, {1d, 1d}, {1d, 0d}, {0d, 1d}};
-  private Double outputs[] = {0d, 1d, 0d, 0d};
+  private Double outputs[] = {0d, 0d, 1d, 1d};
 
   public int getSize() {
     return inputs.length;

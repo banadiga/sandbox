@@ -10,7 +10,7 @@ public class OrCoach extends BaseCoach implements ICoach {
   private Double inputs[][] = {{0d, 0d}, {1d, 1d}, {1d, 0d}, {0d, 1d}};
   private Double outputs[] = {0d, 1d, 1d, 1d};
 
-  protected int getSize() {
+  public int getSize() {
     return inputs.length;
   }
 
