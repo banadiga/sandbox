@@ -1,4 +1,4 @@
-package com.banadiga.ann;
+package com.banadiga.ann.core;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.banadiga.coach;
+package com.banadiga.ann.coach;
 
 public class XorCoach extends BaseCoach implements ICoach {
 

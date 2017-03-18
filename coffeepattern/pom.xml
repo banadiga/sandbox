@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.banadiga</groupId>
-	<artifactId>coffeepattern</artifactId>
+	<artifactId>sandbox-coffeepattern</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>coffeepattern</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for coffeepattern</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

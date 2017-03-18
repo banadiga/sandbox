@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.banadiga</groupId>
-  <artifactId>sandbox-ann</artifactId>
+  <artifactId>sandbox-interfaces</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>ann</name>
-  <description>Demo project for ann</description>
+  <name>interfaces</name>
+  <description>Demo project for interfaces</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

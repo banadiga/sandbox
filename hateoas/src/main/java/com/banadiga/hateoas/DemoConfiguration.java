@@ -1,4 +1,4 @@
-package com.example;
+package com.banadiga.hateoas;
 
 import org.springframework.beans.factory.annotation.Configurable;
 

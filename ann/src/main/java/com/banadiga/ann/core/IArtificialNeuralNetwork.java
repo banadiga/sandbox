@@ -1,4 +1,4 @@
-package com.banadiga.ann;
+package com.banadiga.ann.core;
 
 public interface IArtificialNeuralNetwork {
   Double forecast(Double[] input);

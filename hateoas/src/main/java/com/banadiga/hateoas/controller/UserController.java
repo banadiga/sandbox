@@ -1,7 +1,7 @@
-package com.example.controller;
+package com.banadiga.hateoas.controller;
 
-import com.example.entity.User;
-import com.example.repository.UserRepository;
+import com.banadiga.hateoas.entity.User;
+import com.banadiga.hateoas.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

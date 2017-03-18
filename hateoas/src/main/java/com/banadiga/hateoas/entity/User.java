@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.banadiga.hateoas.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

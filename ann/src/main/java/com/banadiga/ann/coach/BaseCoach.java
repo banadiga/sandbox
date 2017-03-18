@@ -1,6 +1,6 @@
-package com.banadiga.coach;
+package com.banadiga.ann.coach;
 
-import com.banadiga.ann.IArtificialNeuralNetwork;
+import com.banadiga.ann.core.IArtificialNeuralNetwork;
 
 import static java.lang.Math.abs;
 

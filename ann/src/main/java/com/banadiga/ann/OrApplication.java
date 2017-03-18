@@ -1,17 +1,17 @@
-package com.banadiga;
+package com.banadiga.ann;
 
-import com.banadiga.ann.ArtificialNeuralNetwork;
-import com.banadiga.ann.IArtificialNeuralNetwork;
-import com.banadiga.coach.ICoach;
-import com.banadiga.coach.XorCoach;
+import com.banadiga.ann.core.ArtificialNeuralNetwork;
+import com.banadiga.ann.core.IArtificialNeuralNetwork;
+import com.banadiga.ann.coach.ICoach;
+import com.banadiga.ann.coach.OrCoach;
 
-public class XorApplication {
+public class OrApplication {
   public static void main(String[] args) {
 
     System.out.println("Creating Coach... ");
-    ICoach coach = new XorCoach();
+    ICoach coach = new OrCoach();
 
-    IArtificialNeuralNetwork artificialNeuralNetwork = new ArtificialNeuralNetwork(coach.getInputs(), 2);
+    IArtificialNeuralNetwork artificialNeuralNetwork = new ArtificialNeuralNetwork(coach.getInputs());
     System.out.println(artificialNeuralNetwork);
 
     System.out.println("Training... ");
