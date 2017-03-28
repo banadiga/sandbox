@@ -1,47 +1,56 @@
 package com.banadiga.junit5;
 
-import org.junit.Assert;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = TestApplication.class)
+@Tags({
+    @Tag("integration")
+})
 public class MyServiceIntTest {
-
-  @Rule
-  public ExpectedException exception = ExpectedException.none();
 
   @Autowired
   private MyService myService;
 
   @Test
-  public void getRuntimeException() {
-    exception.expect(RuntimeException.class);
-    exception.expectMessage("oh?");
+  @Disabled("Not implemented yet")
+  public void disabled() {
 
-    myService.getMessage("oh");
   }
 
   @Test
+  @DisplayName("runtime exception")
+  public void getRuntimeException() {
+    Throwable actual = Assertions.assertThrows(RuntimeException.class, () -> myService.getMessage("oh"));
+    Assertions.assertEquals("oh?", actual.getLocalizedMessage());
+  }
+
+  @Test
+  @DisplayName("message with long name")
   public void getMessageForLongName() {
     String name = "Spring";
 
     String actual = myService.getMessage(name);
 
-    Assert.assertEquals("Hi Spring", actual);
+    Assertions.assertEquals("Hi Spring", actual);
   }
 
   @Test
+  @DisplayName("message with short name")
   public void getMessageForShortName() {
     String name = "Li";
 
     String actual = myService.getMessage(name);
 
-    Assert.assertEquals("Hello Li", actual);
+    Assertions.assertEquals("Hello Li", actual);
   }
 }

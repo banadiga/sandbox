@@ -1,14 +1,22 @@
 package com.banadiga.junit5;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes = TestApplication.class)
+@Tags({
+    @Tag("mock")
+})
 public class MyTopServiceTest {
 
   @Mock
@@ -18,11 +26,12 @@ public class MyTopServiceTest {
   private MyTopService myTopService;
 
   @Test
+  @DisplayName("top message")
   public void getTopMessage() throws Exception {
     Mockito.doReturn("message").when(myService).getMessage("name");
 
     String actual = myTopService.getTopMessage("name");
 
-    Assert.assertEquals("message!!!", actual);
+    Assertions.assertEquals("message!!!", actual);
   }
 }
