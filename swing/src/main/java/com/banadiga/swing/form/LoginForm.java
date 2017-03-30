@@ -13,15 +13,13 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class LoginForm extends JFrame {
+class LoginForm extends JFrame {
+  private boolean logined = false;
   private final JTextField login = new JTextField(15);
   private final JTextField password = new JPasswordField(15);
 
-  private final ApplicationForm applicationForm;
-
-  public LoginForm(ApplicationForm applicationForm) {
+  LoginForm() {
     setTitle("LOGIN FORM");
-    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     JPanel grid = new JPanel(new GridLayout(3, 1));
 
@@ -31,33 +29,38 @@ public class LoginForm extends JFrame {
     grid.add(new JLabel("Password:"));
     grid.add(password);
 
-    JButton submit = new JButton("Login");
-    grid.add(submit);
+    JButton login = new JButton("Login");
+    login.addActionListener(new OnLoginActionListener(this));
+    grid.add(login);
+    grid.add(new JLabel("admin/password"));
 
     add(grid, BorderLayout.CENTER);
-    submit.addActionListener(new LoginListener(this));
-
-    this.applicationForm = applicationForm;
   }
 
+  String getCurrentUser() {
+    if (!logined) {
+      return null;
+    }
+    return login.getText();
+  }
 
-  private class LoginListener implements ActionListener {
-    JFrame frame;
+  private class OnLoginActionListener implements ActionListener {
+    private LoginForm loginForm;
 
-    LoginListener(JFrame frame) {
-      this.frame = frame;
+    OnLoginActionListener(LoginForm loginForm) {
+      this.loginForm = loginForm;
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-      String userName = login.getText();
-      String userPass = password.getText();
+      String userName = loginForm.login.getText();
+      String userPass = loginForm.password.getText();
       if (userName.equals("admin") && userPass.equals("password")) {
-        frame.setVisible(false);
-        applicationForm.login(userName);
+        loginForm.logined = true;
+        loginForm.setVisible(false);
       } else {
         System.out.println("Entered the valid username and password");
-        JOptionPane.showMessageDialog(frame, "Incorrect login or password", "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(loginForm, "Incorrect login or password", "Error", JOptionPane.ERROR_MESSAGE);
       }
     }
   }
