@@ -9,6 +9,9 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
+  <name>sandbox | swing</name>
+  <description>Demo project for swing</description>
+
   <build>
     <plugins>
       <plugin>
