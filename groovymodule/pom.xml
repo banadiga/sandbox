@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.banadiga</groupId>
+  <artifactId>sandbox-groovymodule</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>sandbox | groovymodule</name>
+  <description>Demo project for groovymodule</description>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.fortasoft</groupId>
+          <artifactId>gradle-maven-plugin</artifactId>
+          <version>1.0.8</version>
+          <configuration>
+            <tasks>
+              <task>clean</task>
+            </tasks>
+          </configuration>
+          <executions>
+            <execution>
+              <id>clean</id>
+              <phase>clean</phase>
+              <goals>
+                <goal>invoke</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.fortasoft</groupId>
+          <artifactId>gradle-maven-plugin</artifactId>
+          <version>1.0.8</version>
+          <configuration>
+            <tasks>
+              <task>clean</task>
+              <task>build</task>
+            </tasks>
+          </configuration>
+          <executions>
+            <execution>
+              <id>install</id>
+              <phase>install</phase>
+              <goals>
+                <goal>invoke</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>org.fortasoft</groupId>
+        <artifactId>gradle-maven-plugin</artifactId>
+        <version>1.0.8</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
