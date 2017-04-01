@@ -1,0 +1,23 @@
+{
+  "name": "npm-web-app",
+  "version": "1.2.0",
+  "description": "Demo project for npm-web-app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack-server": "webpack-dev-server --hot --progress --colors",
+    "web-server": "http-server -p 3000 .",
+    "start": "npm run webpack-server & npm run web-server"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Ihor Banadiga",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.8.0",
+    "bootswatch": "^3.3.7",
+    "gmaps": "^0.4.24",
+    "jquery": "^3.2.1",
+    "moment": "^2.18.1"
+  }
+}

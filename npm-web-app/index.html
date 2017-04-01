@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="HTML, META, метатег, тег, поисковая система">
+    <meta name="GENERATOR" content="hands">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+<body>
+
+<header>header</header>
+<main>
+    <menu label="File" type="list">
+        <li>New...</li>
+        <li>Open...</li>
+        <li>Save</li>
+    </menu>
+
+    <article>
+        <canvas id="smile" width="200" height="200"><p>unsupported....</p></canvas>
+        <section>
+            <h1>title1</h1>
+            Text test text test text test text test text test text test text test text test text test text test text
+            test text test text test text test text test test text test text test text test text test text test text
+            test text test text test text test text test text test text test text test test text test text test text
+            <mark>text test</mark>
+            text test text test text test text test text test text test text test text test text test text test text
+            test text test text test test text test text test text test text test text test text test text test text
+            test text test text test text test text test text test test text test text test text test text test text
+        </section>
+        <section>
+            <h1>title2</h1>
+            Text test text test text test text test text test text test text test text test text test text test text
+            test text test text test text test text test test text test text test text test text test text test text
+            test text test text test text test text test text test text test text test test text test text test text
+            <mark>text test</mark>
+            text test text test text test text test text test text test text test text test text test text test text
+            test text test text test test text test text test text test text test text test text test text test text
+            test text test text test text test text test text test test text test text test text test text test text
+        </section>
+    </article>
+
+</main>
+<footer>footer
+    <nav><a href="index.html">top</a> <a href="index.html">article</a></nav>
+    <p>Autocomplete<input list="character">
+        <datalist id="character">
+            <option value="asdfghjkl"></option>
+            <option value="asdfghjkl123"></option>
+            <option value="qwertyuiop"></option>
+            <option value="qwertyuiop123"></option>
+            <option value="zxcvbnm"></option>
+            <option value="zxcvbnm123"></option>
+            <option value="zxcvbnm456"></option>
+        </datalist>
+        <progress value="50" max="150">
+            Text in progress
+        </progress>
+    </p>
+</footer>
+</body>
+<script>
+    window.onload = function () {
+        var drawingCanvas = document.getElementById('smile');
+        if (drawingCanvas && drawingCanvas.getContext) {
+            var context = drawingCanvas.getContext('2d');
+            // Рисуем окружность
+            context.strokeStyle = "#000";
+            context.fillStyle = "#fc0";
+            context.beginPath();
+            context.arc(100, 100, 50, 0, Math.PI * 2, true);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            // Рисуем левый глаз
+            context.fillStyle = "#fff";
+            context.beginPath();
+            context.arc(84, 90, 8, 0, Math.PI * 2, true);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            // Рисуем правый глаз
+            context.beginPath();
+            context.arc(116, 90, 8, 0, Math.PI * 2, true);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            // Рисуем рот
+            context.beginPath();
+            context.moveTo(70, 115);
+            context.quadraticCurveTo(100, 130, 130, 115);
+            context.quadraticCurveTo(100, 150, 70, 115);
+            context.closePath();
+            context.stroke();
+            context.fill();
+        }
+    }
+</script>
+</html>
