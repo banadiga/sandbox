@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.banadiga.hibot</groupId>
-  <artifactId>hibot</artifactId>
+  <artifactId>sandbox-hibot</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>hibot</name>
+  <name>sandbox | hibot</name>
   <description>Demo project for hibot</description>
 
   <parent>
