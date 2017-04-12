@@ -2,6 +2,8 @@
 
 echo "Run javac...";
 sh ./javac.sh;
+echo "Run jmod...";
+sh ./jmod.sh;
 echo "Run java...";
 sh ./java.sh;
 echo "Run jar...";

@@ -3,7 +3,7 @@
 rm -rf target/jlink
 
 /usr/lib/jvm/java-9-oracle/bin/jlink \
-    --module-path /usr/lib/jvm/java-9-oracle/jmods:../java9module/target/sandboxjava9module/:./target/jar/ \
+    --module-path /usr/lib/jvm/java-9-oracle/jmods:../java9module/target/jmods/:./target/jmods/ \
     --add-modules sandboxjava9jlink \
     --output target/jlink \
     --exclude-files *.diz \
