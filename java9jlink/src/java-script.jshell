@@ -1,0 +1,5 @@
+File folder = new File("./")
+File[] listOfFiles = folder.listFiles()
+Arrays.stream(listOfFiles).filter(File::isFile).forEach(System.out::println)
+
+/exit
