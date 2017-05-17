@@ -1,7 +1,9 @@
-package com.banadiga.springdatarest.employer;
+package com.banadiga.springdatarest.employer.controller;
 
 
 import lombok.extern.slf4j.Slf4j;
+
+import com.banadiga.springdatarest.employer.Employer;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -10,7 +12,7 @@ import org.springframework.validation.Validator;
 
 @Slf4j
 @Component
-public class EmployerValidator implements Validator {
+public class EmployerResourceValidator implements Validator {
 
   @Override
   public boolean supports(Class<?> aClass) {
@@ -21,9 +23,9 @@ public class EmployerValidator implements Validator {
   public void validate(Object target, Errors errors) {
     final Employer employer = (Employer) target;
 
-    final String firtName = employer.getFirstName();
-    if (StringUtils.isEmpty(firtName)) {
-      errors.rejectValue("firtName", "400", "First name cannot be empty.");
+    final String firstName = employer.getFirstName();
+    if (StringUtils.isEmpty(firstName)) {
+      errors.rejectValue("firstName", "400", "First name cannot be empty.");
     }
 
     final String lastName = employer.getLastName();

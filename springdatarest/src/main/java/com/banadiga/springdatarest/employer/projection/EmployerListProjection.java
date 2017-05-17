@@ -1,4 +1,6 @@
-package com.banadiga.springdatarest.employer;
+package com.banadiga.springdatarest.employer.projection;
+
+import com.banadiga.springdatarest.employer.Employer;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.rest.core.config.Projection;
@@ -8,4 +10,9 @@ public interface EmployerListProjection {
 
   @Value("#{target.firstName} #{target.lastName}")
   String getFullName();
+
+  String getPhoto();
+
+  @Value("#{target.project}")
+  String getProjectName();
 }

@@ -1,4 +1,6 @@
-package com.banadiga.springdatarest.project;
+package com.banadiga.springdatarest.project.repository;
+
+import com.banadiga.springdatarest.project.Project;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
@@ -10,6 +12,6 @@ import java.util.Collection;
 @RepositoryRestResource
 public interface ProjectRepository extends MongoRepository<Project, String> {
 
-  @RestResource(path = "nameStartsWith")
+  @RestResource(path = "name-starts-with", rel = "name-starts-with")
   Collection<Project> findAllByNameStartsWith(@Param("name") String name);
 }
