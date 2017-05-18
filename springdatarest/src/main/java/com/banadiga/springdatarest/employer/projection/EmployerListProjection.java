@@ -11,8 +11,6 @@ public interface EmployerListProjection {
   @Value("#{target.firstName} #{target.lastName}")
   String getFullName();
 
-  String getPhoto();
-
-  @Value("#{target.project}")
+  @Value("#{target.project.name}")
   String getProjectName();
 }

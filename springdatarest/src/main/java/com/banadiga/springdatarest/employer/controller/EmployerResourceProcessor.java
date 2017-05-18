@@ -23,7 +23,6 @@ public class EmployerResourceProcessor implements ResourceProcessor<Resource<Emp
 
     employerLinkService.getPhotoLink(employer).ifPresent(resource::add);
     employerLinkService.getRemovePhotoLink(employer).ifPresent(resource::add);
-    employerLinkService.getProjectLink(employer).ifPresent(resource::add);
 
     return resource;
   }

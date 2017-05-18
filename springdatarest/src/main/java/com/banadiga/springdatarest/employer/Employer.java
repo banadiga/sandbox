@@ -11,6 +11,7 @@ import com.banadiga.springdatarest.project.Project;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.Min;
@@ -38,5 +39,6 @@ public class Employer {
 
   private String photo;
 
+  @DBRef
   private Project project;
 }

@@ -5,8 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 
 import com.banadiga.springdatarest.employer.Employer;
 import com.banadiga.springdatarest.employer.controller.EmployerRepositoryRestController;
-import com.banadiga.springdatarest.project.Project;
-import com.banadiga.springdatarest.project.repository.ProjectRepository;
 
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
@@ -45,17 +43,5 @@ public class EmployerLinkService {
         .removePhoto(employer.getId());
 
     return Optional.of(ControllerLinkBuilder.linkTo(responseEntity).withRel(REMOVE_IMAGE));
-  }
-
-  public Optional<Link> getProjectLink(Employer employer) {
-    if (employer.getProject() == null) {
-      return Optional.empty();
-    }
-
-    Project responseEntity = ControllerLinkBuilder
-        .methodOn(ProjectRepository.class)
-        .findOne(employer.getProject().getId());
-
-    return Optional.of(ControllerLinkBuilder.linkTo(responseEntity).withRel(PROJECT));
   }
 }

@@ -17,4 +17,8 @@ public interface EmployerRepository extends MongoRepository<Employer, String>, C
 
   @RestResource(path = "withoutPhoto", rel = "without-photo")
   Collection<Employer> findAllByPhotoIsNull();
+
+  @RestResource(path = "byProject", rel = "project")
+  Collection<Employer> findAllByProjectId(String id);
+
 }
