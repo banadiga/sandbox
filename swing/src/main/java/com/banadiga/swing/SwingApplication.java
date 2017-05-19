@@ -4,7 +4,7 @@ import com.banadiga.swing.form.ApplicationForm;
 
 import javax.swing.JFrame;
 
-public class HelloWorldSwing {
+public class SwingApplication {
 
 
   private static void createApplication() {
@@ -14,6 +14,6 @@ public class HelloWorldSwing {
   }
 
   public static void main(String[] args) {
-    javax.swing.SwingUtilities.invokeLater(HelloWorldSwing::createApplication);
+    javax.swing.SwingUtilities.invokeLater(SwingApplication::createApplication);
   }
 }

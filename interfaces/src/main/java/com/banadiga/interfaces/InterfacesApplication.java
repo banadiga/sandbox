@@ -1,6 +1,6 @@
 package com.banadiga.interfaces;
 
-public class Application {
+public class InterfacesApplication {
   public static void main(String[] args) {
 
     new ClassA().test();

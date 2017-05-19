@@ -46,7 +46,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.banadiga.java9jlink.Application</mainClass>
+              <mainClass>com.banadiga.java9jlink.Java9JlinkApplication</mainClass>
             </manifest>
           </archive>
         </configuration>

@@ -21,7 +21,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.banadiga.swing.HelloWorldSwing</mainClass>
+              <mainClass>com.banadiga.swing.SwingApplication</mainClass>
             </manifest>
           </archive>
         </configuration>

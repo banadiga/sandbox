@@ -15,10 +15,23 @@
     <module>ann</module>
     <module>caching</module>
     <module>coffeepattern</module>
+    <module>concurrent</module>
+    <module>functional-interface</module>
     <module>groovymodule</module>
     <module>hateoas</module>
+    <module>hibot</module>
+    <module>http2</module>
     <module>interfaces</module>
+    <!--<module>java9jlink</module>-->
+    <!--<module>java9module</module>-->
+    <!--<module>java9springboot</module>-->
     <module>junit5</module>
+    <!--<module>npm-web-app</module>-->
+    <module>sjlvsac</module>
+    <module>springdatarest</module>
+    <module>springrestdocs</module>
+    <module>staticblock</module>
     <module>swing</module>
+    <module>xml</module>
   </modules>
 </project>

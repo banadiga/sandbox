@@ -1,6 +1,6 @@
 package com.banadiga.staticblock;
 
-public class Application {
+public class StaticblockApplication {
   private Singleton singleton;
 
   {
@@ -15,12 +15,12 @@ public class Application {
     System.out.println("Hello World 3");
   }
 
-  public Application() {
+  public StaticblockApplication() {
     singleton = Singleton.getInstance();
   }
 
   public static void main(String[] args) {
-    Application application = new Application();
+    StaticblockApplication application = new StaticblockApplication();
     application.singleton.run();
     Singleton.getInstance().run();
     SingletonWithHolder.getInstance().run();
