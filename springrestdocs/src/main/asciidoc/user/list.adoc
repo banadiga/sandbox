@@ -1,0 +1,35 @@
+[[resources-list-users]]
+=== Listing users
+
+A `GET` request will list all of the users.
+
+==== HTTP request
+include::{snippets}/list-users/http-request.adoc[]
+
+//==== HTTP request body
+//include::{snippets}/list-users/request-body.adoc[]
+
+==== HTTP response body
+include::{snippets}/list-users/response-body.adoc[]
+
+==== Path parameters
+include::{snippets}/list-users/path-parameters.adoc[]
+
+//==== Request fields
+//include::{snippets}/list-users/request-fields.adoc[]
+
+==== Response fields
+include::{snippets}/list-users/response-fields.adoc[]
+
+==== Links
+include::{snippets}/list-users/links.adoc[]
+
+==== Example request / response
+===== Curl
+include::{snippets}/list-users/curl-request.adoc[]
+
+===== http
+include::{snippets}/list-users/httpie-request.adoc[]
+
+===== response
+include::{snippets}/list-users/http-response.adoc[]

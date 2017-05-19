@@ -1,0 +1,35 @@
+[[resources-delete-user]]
+=== Delete selected user
+
+A `DEPETE` request will delete an user.
+
+==== HTTP request
+include::{snippets}/delete-user/http-request.adoc[]
+
+//==== HTTP request body
+//include::{snippets}/delete-user/request-body.adoc[]
+
+//==== HTTP response body
+//include::{snippets}/delete-user/response-body.adoc[]
+
+==== Path parameters
+include::{snippets}/delete-user/path-parameters.adoc[]
+
+//==== Request fields
+//include::{snippets}/delete-user/request-fields.adoc[]
+
+//==== Response fields
+//include::{snippets}/delete-user/response-fields.adoc[]
+
+//==== Links
+//include::{snippets}/delete-user/links.adoc[]
+
+==== Example request / response
+===== Curl
+include::{snippets}/delete-user/curl-request.adoc[]
+
+===== http
+include::{snippets}/delete-user/httpie-request.adoc[]
+
+===== response
+include::{snippets}/delete-user/http-response.adoc[]

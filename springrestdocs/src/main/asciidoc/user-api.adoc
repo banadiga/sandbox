@@ -1,0 +1,15 @@
+
+[[resources]]
+= Resources
+
+[[resources-user]]
+== User
+The User resource is used to create, modify and list users.
+
+include::user/create.adoc[]
+include::user/list.adoc[]
+include::user/get.adoc[]
+include::user/update.adoc[]
+include::user/patch.adoc[]
+include::user/delete.adoc[]
+

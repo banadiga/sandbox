@@ -1,0 +1,35 @@
+[[resources-update-user]]
+=== Update selected user
+
+A `PUT` request will update an user.
+
+==== HTTP request
+include::{snippets}/update-user/http-request.adoc[]
+
+==== HTTP request body
+include::{snippets}/update-user/request-body.adoc[]
+
+==== HTTP response body
+include::{snippets}/update-user/response-body.adoc[]
+
+==== Path parameters
+include::{snippets}/update-user/path-parameters.adoc[]
+
+==== Request fields
+include::{snippets}/update-user/request-fields.adoc[]
+
+==== Response fields
+include::{snippets}/update-user/response-fields.adoc[]
+
+==== Links
+include::{snippets}/update-user/links.adoc[]
+
+==== Example request / response
+===== Curl
+include::{snippets}/update-user/curl-request.adoc[]
+
+===== http
+include::{snippets}/update-user/httpie-request.adoc[]
+
+===== response
+include::{snippets}/update-user/http-response.adoc[]

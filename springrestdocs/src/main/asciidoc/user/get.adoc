@@ -1,0 +1,35 @@
+[[resources-get-user]]
+=== Get user by id
+
+A `GET` request will create an user.
+
+==== HTTP request
+include::{snippets}/get-user/http-request.adoc[]
+
+//==== HTTP request body
+//include::{snippets}/get-user/request-body.adoc[]
+
+==== HTTP response body
+include::{snippets}/get-user/response-body.adoc[]
+
+==== Path parameters
+include::{snippets}/get-user/path-parameters.adoc[]
+
+//==== Request fields
+//include::{snippets}/get-user/request-fields.adoc[]
+
+==== Response fields
+include::{snippets}/get-user/response-fields.adoc[]
+
+==== Links
+include::{snippets}/get-user/links.adoc[]
+
+==== Example request / response
+===== Curl
+include::{snippets}/get-user/curl-request.adoc[]
+
+===== http
+include::{snippets}/get-user/httpie-request.adoc[]
+
+===== response
+include::{snippets}/get-user/http-response.adoc[]
